@@ -280,4 +280,5 @@ public class RaftState implements Runnable {
 
     @Override
     public void run() { }
+
 }

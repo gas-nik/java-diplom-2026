@@ -14,4 +14,5 @@ public class AppendRequest {
     private int prevLogTerm;
     private List<LogEntry> entries;
     private int leaderCommit;
+
 }

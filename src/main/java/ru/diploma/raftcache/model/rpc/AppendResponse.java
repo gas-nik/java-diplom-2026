@@ -8,4 +8,5 @@ import lombok.Data;
 public class AppendResponse {
     private int term;
     private boolean success;
+
 }

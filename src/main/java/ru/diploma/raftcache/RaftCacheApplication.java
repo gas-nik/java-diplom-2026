@@ -8,4 +8,5 @@ public class RaftCacheApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RaftCacheApplication.class, args);
 	}
+
 }

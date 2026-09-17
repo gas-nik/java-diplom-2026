@@ -11,4 +11,5 @@ public class ClusterConfig {
     public static String getBaseUrl(int port) {
         return "http://localhost:" + port;
     }
+
 }

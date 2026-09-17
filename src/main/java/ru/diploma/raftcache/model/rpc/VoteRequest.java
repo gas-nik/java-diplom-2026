@@ -12,4 +12,5 @@ public class VoteRequest {
     private String candidateId;
     private int lastLogIndex;
     private int lastLogTerm;
+
 }

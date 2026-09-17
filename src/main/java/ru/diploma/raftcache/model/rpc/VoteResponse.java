@@ -8,4 +8,5 @@ import lombok.Data;
 public class VoteResponse {
     private int term;
     private boolean voteGranted;
+
 }

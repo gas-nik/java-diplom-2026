@@ -30,4 +30,5 @@ public class UiController {
         model.addAttribute("nodes", nodes);
         return "dashboard";
     }
+
 }

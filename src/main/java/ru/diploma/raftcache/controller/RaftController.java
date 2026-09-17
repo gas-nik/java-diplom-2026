@@ -59,4 +59,5 @@ public class RaftController {
         System.out.println("[Node " + state.getServerPort() + "] New log entry added: " + entry.getCommand());
         return "OK";
     }
+
 }
