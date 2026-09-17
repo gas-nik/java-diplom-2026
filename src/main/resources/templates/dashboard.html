@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Raft Simulator Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; }
+        .cluster { display: flex; gap: 20px; padding: 20px; }
+        .node { border: 2px solid #ccc; padding: 15px; border-radius: 8px; width: 200px; text-align: center; }
+        .leader { border-color: #4CAF50; box-shadow: 0 0 10px green; }
+        .follower { border-color: #2196F3; }
+        .candidate { border-color: #FF9800; }
+        pre { background: #eee; padding: 10px; text-align: left; }
+    </style>
+    <meta http-equiv="refresh" content="2">
+</head>
+<body>
+<h1 align="center">Raft Cluster Simulation</h1>
+<div class="cluster">
+    <div th:each="entry : ${nodes}" class="node"
+         th:classappend="${entry.value['role'] == 'LEADER' ? 'leader' :
+                         entry.value['role'] == 'FOLLOWER' ? 'follower' : 'candidate'}">
+        <h3 th:text="${entry.key}"></h3>
+        <p><b>Status:</b> <span th:text="${entry.value['role']}"></span></p>
+        <p><b>Term:</b> <span th:text="${entry.value['term']}"></span></p>
+        <p style="font-size: 12px;" th:text="${entry.value['lastHeartbeat']}"></p>
+    </div>
+</div>
+</body>
+</html>
